@@ -1,69 +1,84 @@
 body {
+    margin: 0;
+
     background-image: url("Cards background.png");
-    background-size: 110%;
-    background-position: center ;
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+
     font-family: 'Times New Roman', Times, serif;
+
+    min-height: 100vh;
 }
+
+
+/* =========================
+   LEFT CARD
+   ========================= */
 
 header {
     position: fixed;
-    top: 16%;
-    left: 19.5%;
-    text-align: center;
-    width: 240px;
+    top: 19vh;
+    left: 21vw;
+    width: 16vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+
 .profile-photo {
-    width: 11vw;
-    height: 11vw;
+    width: clamp(90px, 11vw, 180px);
+    height: clamp(90px, 11vw, 180px);
     object-fit: cover;
     border-radius: 50%;
 }
 
+
 .intro-text {
+    width: 90%;
     text-align: left;
-    width: 100%;
-    font-size: clamp(8px, 1.15vw, 24px);
+    font-size: clamp(10px, 1.1vw, 20px);
     line-height: 1.3;
 }
 
-h1 {
-    color: blue;
-    text-align: center;
-}
 
-h2 {
-    color: #333333;
-}
+/* =========================
+   MENU
+   ========================= */
 
 .menu {
     position: fixed;
-    left: 45%;
-    top: 40%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: clamp(10px, 1.5vw, 20px);
 }
 
+
 .menu button {
-    width: 140px;
-    padding: 12px;
-    font-size: 1.0vw;
+    width: clamp(100px, 10vw, 150px);
+    padding: clamp(8px, 0.8vw, 12px);
+    font-size: clamp(12px, 1vw, 18px);
     cursor: pointer;
 }
 
 
-/* right content */
+/* =========================
+   RIGHT CARD
+   ========================= */
 
 .right-content {
     position: fixed;
-    left: 64%;
-    top: 20%;
-    width: 25%;
-    font-size: 1.0vw;
+    left: 62.5vw;
+    top: 22.5vh;
+    width: 20vw;
+    font-size: clamp(10px, 0.93vw, 18px);
 }
+
 
 .content-image {
     width: 50%;
@@ -72,24 +87,96 @@ h2 {
     margin: 20px auto;
 }
 
+
 .content-image2 {
     width: 54%;
     height: auto;
     display: block;
-    /* margin: 20px auto; */
-    margin-top: 0px;
-    margin-left: 45px;
+    margin: 20px auto;
+    position: relative;
+    left: -20px;
 }
 
-/* hidden content */
+
+/* =========================
+   CONTENT
+   ========================= */
 
 .content {
     display: none;
 }
 
-
-/* active content */
-
 .content.active {
     display: block;
+}
+
+
+
+
+
+@media (max-width: 700px) {
+
+    body {
+        background-image: none;
+        background-color: #f5efe3;
+    }
+
+    header {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        width: 80%;
+
+        margin: 40px auto;
+    }
+
+    .profile-photo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .intro-text {
+        font-size: 16px;
+    }
+
+    .menu {
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        transform: none;
+
+        width: 80%;
+
+        margin: 30px auto;
+
+        align-items: center;
+    }
+
+    .menu button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .right-content {
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        width: 80%;
+
+        margin: 40px auto;
+
+        font-size: 16px;
+    }
+
+    .content-image,
+    .content-image2 {
+        width: 70%;
+        margin: 20px auto;
+    }
 }

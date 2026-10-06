@@ -1,0 +1,81 @@
+body {
+    background-image: url("Cards background.png");
+    background-size: 110%;
+    background-position: center ;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+    position: fixed;
+    top: 16%;
+    left: 19.5%;
+    text-align: center;
+    width: 240px;
+}
+
+.profile-photo {
+    width: 11vw;
+    height: 11vw;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.intro-text {
+    text-align: left;
+    width: 100%;
+    font-size: clamp(8px, 1.15vw, 24px);
+    line-height: 1.3;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+h2 {
+    color: #333333;
+}
+
+.menu {
+    position: fixed;
+    left: 45%;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu button {
+    width: 140px;
+    padding: 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* 右邊內容 */
+
+.right-content {
+    position: fixed;
+
+    left: 65%;
+    top: 20%;
+
+    width: 25%;
+}
+
+
+/* 預設隱藏內容 */
+
+.content {
+    display: none;
+}
+
+
+/* active 的內容才顯示 */
+
+.content.active {
+    display: block;
+}

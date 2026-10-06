@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yuche Portfolio</title>
+
+    <link rel="stylesheet" href="YC_website_style.css">
+</head>
+
+<body>
+
+    <!-- part1 -->
+    <header>
+        <img class="profile-photo"
+             src="mypicture.jpg"
+             alt="My profile photo">
+
+        <p class="intro-text">
+            - Name: 李雨澈 <br>
+            - English name: Yu-Che Lee <br>
+            - ID: D1500701 <br>
+            - Gender: male <br>
+            - Birthday: 1999/6/19 <br>
+            - hobbies: <br>
+            &nbsp;&nbsp;math,&nbsp;music,&nbsp;basketball,&nbsp;magic<br>
+            - Contact: <br>
+            &nbsp;&nbsp;rickgreen55123@gmail.com
+        </p>
+    </header>
+
+
+    <!-- part2 -->
+    <div class="menu">
+
+        <button onclick="showContent('about')">
+            About Me
+        </button>
+
+        <button onclick="showContent('skills')">
+            Skills
+        </button>
+
+        <button onclick="showContent('projects')">
+            Projects
+        </button>
+
+    </div>
+
+
+    <!-- part3 -->
+    <div class="right-content">
+
+        <div id="about" class="content active">
+            <h2>About Me</h2>
+
+            <p>
+                Hello! My name is Yu-Che Lee.
+            </p>
+        </div>
+
+
+        <div id="skills" class="content">
+            <h2>Skills</h2>
+
+            <p>
+                Python <br>
+                Machine Learning <br>
+                Data Analysis
+            </p>
+        </div>
+
+
+        <div id="projects" class="content">
+            <h2>Projects</h2>
+
+            <p>
+                Here are some of my projects.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- part4 -->
+    <script>
+
+        function showContent(id) {
+
+            const contents =
+                document.querySelectorAll(".content");
+
+            contents.forEach(function(content) {
+                content.classList.remove("active");
+            });
+
+            document
+                .getElementById(id)
+                .classList.add("active");
+        }
+
+    </script>
+
+</body>
+
+</html>

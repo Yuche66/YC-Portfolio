@@ -50,31 +50,45 @@ h2 {
 .menu button {
     width: 140px;
     padding: 12px;
-    font-size: 18px;
+    font-size: 1.0vw;
     cursor: pointer;
 }
 
 
-/* 右邊內容 */
+/* right content */
 
 .right-content {
     position: fixed;
-
-    left: 65%;
+    left: 64%;
     top: 20%;
-
     width: 25%;
+    font-size: 1.0vw;
 }
 
+.content-image {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
 
-/* 預設隱藏內容 */
+.content-image2 {
+    width: 54%;
+    height: auto;
+    display: block;
+    /* margin: 20px auto; */
+    margin-top: 0px;
+    margin-left: 45px;
+}
+
+/* hidden content */
 
 .content {
     display: none;
 }
 
 
-/* active 的內容才顯示 */
+/* active content */
 
 .content.active {
     display: block;
